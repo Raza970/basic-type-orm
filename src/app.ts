@@ -1,7 +1,6 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
 import  express  from "express";
-// import { Photo } from "./entity/Photo"
 import {User} from "./entity/users"
 
 const app = express();
