@@ -31,7 +31,7 @@ AppDataSource.initialize()
     .then(() => {
         
         // here you can start to work with your database
-        console.log("Connected to database!")
+        console.log("Connected to database!!")
     })
     .catch((error) => console.log("Not Connected",error))
     
