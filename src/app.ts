@@ -1,7 +1,7 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
 import  express  from "express";
-import {User} from "./entity/users"
+import {User} from "./users"
 
 const app = express();
 app.use(express.json());
@@ -11,7 +11,7 @@ const port = 3000;
 app.get("/",async function (req,res) {
     // res.send("Hello World")
     const users = await AppDataSource.getRepository(User).find()
-    res.send(users)
+    res.json(users)
 })
 
 const AppDataSource = new DataSource({
@@ -19,8 +19,8 @@ const AppDataSource = new DataSource({
     host: "localhost",
     port: 5432,
     username: "root",
-    password: "admin",
-    database: "test",
+    password: "Malik@321",
+    database: "typeorm",
     entities: [User],
     synchronize: true,
     logging: false,
